@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   after_create :increment_user_posts_counter
 
   def increment_user_posts_counter
-    user.increment!(:post_counter)
+    user.increment!(:posts_counter)
   end
 
   def recent_comments
