@@ -1,1 +1,18 @@
-<h1>Here is the  posts details for a given user</h1>
+<div class="post-detail">
+  <div class="post-head">
+    <h3>Post <%=@post.id %> by <%= @user.name %></h3>
+      <ul>
+        <li>Comments: <%= @post.comments_counter || 0 %> </li>
+        <li>Likes: <%= @post.likes_counter || 0 %> </li>
+      </ul>
+  </div>
+  <div class="post-body">
+    <p><%= @post.text %></p>
+  </div>
+</div>
+<div class="post-comments">
+  <% @post.comments.each do |comment| %>
+    <% user = User.find(comment.user_id)  %>
+    <p><%= user.name %>: <%= comment.text %></p>
+  <% end %>
+</div>
