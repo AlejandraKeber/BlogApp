@@ -1,1 +1,6 @@
-<h1>Here is a list of posts for a given user</h1>
+<%= render 'shared/user', user: @user %>
+<% @posts.each do |post| %>
+  <%= render partial: 'shared/post', locals: { post: post}  %>
+<% end %>
+
+

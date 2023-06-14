@@ -4,5 +4,7 @@
   <p><%= @user.bio %></p>
 </div>
   <% @user.recent_posts.each do |post| %>
+    <%= link_to user_posts_path(@user) do %>
     <%= render 'shared/post', post: post %>
+    <% end %>
   <% end %>
