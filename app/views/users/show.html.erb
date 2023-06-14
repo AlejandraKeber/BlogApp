@@ -1,1 +1,23 @@
 <h1>Here is the details for a given user</h1>
+<div class="user">
+  <div class="user-image">
+    <img src="<%= @user.photo %>" alt="user-image">
+  </div>
+  <div class="user-detail">
+    <p class="user-name"><%= @user.name %></p>
+    <p class="post-number">Number of posts: <%= 0 || @user.posts_counter %></p>
+  </div>
+</div>
+<div class="bio">
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</div>
+<div class="posts">
+  <h2>Recent Posts</h2>
+  <% @user.recent_posts.each do |post| %>
+    <div class="post">
+        <p class="post-title"><%= post.title %></p>
+        <p class="post-text"><%= post.text %></p>
+    </div>
+  <% end %>
+</div>
