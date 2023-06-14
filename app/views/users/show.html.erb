@@ -3,12 +3,6 @@
   <h2>Bio</h2>
   <p><%= @user.bio %></p>
 </div>
-<div class="posts">
-  <h2>Recent Posts</h2>
   <% @user.recent_posts.each do |post| %>
-    <div class="post">
-        <p class="post-title"><%= post.title %></p>
-        <p class="post-text"><%= post.text %></p>
-    </div>
+    <%= render 'shared/post', post: post %>
   <% end %>
-</div>
