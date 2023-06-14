@@ -1,6 +1,12 @@
 <%= render 'shared/user', user: @user %>
 <% @posts.each do |post| %>
   <%= render partial: 'shared/post', locals: { post: post}  %>
+  <div class="comments">
+    <% post.recent_comments.each do |comment| %>
+      <% user = User.find(comment.user_id)  %>
+      <p><strong><%= user.name %>:</strong> <%= comment.text %></p>
+    <% end %>
+  </div>
 <% end %>
 
 
