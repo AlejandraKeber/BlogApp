@@ -12,7 +12,6 @@
 </div>
 <div class="post-comments">
   <% @post.comments.each do |comment| %>
-    <% user = User.find(comment.user_id)  %>
-    <p><%= user.name %>: <%= comment.text %></p>
+    <%= render partial: 'shared/comment', locals: { comment: comment } %>
   <% end %>
 </div>
