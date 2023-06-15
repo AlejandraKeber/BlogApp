@@ -2,7 +2,7 @@
   <div class="post-head">
     <h4>Post <%=@post.id %> by <%= @user.name %></h4>
     <p class="post-head-counter">
-      Comments: <%= @post.comments_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %>
+      Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
     </p>
   </div>
   <div class="post-body">
