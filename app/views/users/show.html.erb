@@ -1,1 +1,13 @@
-<h1>Here is the details for a given user</h1>
+<%= render 'shared/user', user: @user %>
+<div class="bio">
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</div>
+  <% @user.recent_posts.each do |post| %>
+    <%= render 'shared/post', post: post %>
+  <% end %>
+<div class="see-posts">
+  <%= link_to user_posts_path(@user) do %>
+    <button class="see-posts-btn">See all posts</button>
+  <% end %>
+</div>

@@ -13,3 +13,128 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #2d2d2d;
+  color: #fff;
+ }
+
+ a {
+  color: #fff;
+  text-decoration: none;
+ }
+
+ .user {
+  background-color: #5a5a5a;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .user-image {
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+ }
+
+ .user-detail {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+ }
+
+ .user-detail:hover {
+  background-color: #2d2d2d;
+ }
+
+ .post-number {
+  vertical-align: bottom;
+ }
+
+ .bio {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post:hover {
+  background-color: #2d2d2d;
+ }
+
+ .counters {
+  text-align: end;
+ }
+
+ .see-posts {
+  text-align: center;
+ }
+
+ .see-posts-btn {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+ }
+
+ .see-posts-btn:hover {
+  background-color: #2d2d2d;
+ }
+
+ .comments {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post-detail {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .post-comments {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+ }

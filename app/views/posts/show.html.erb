@@ -1,1 +1,16 @@
-<h1>Here is the  posts details for a given user</h1>
+<div class="post-detail">
+  <div class="post-head">
+    <h4>Post <%=@post.id %> by <%= @user.name %></h4>
+    <p class="post-head-counter">
+      Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+    </p>
+  </div>
+  <div class="post-body">
+    <p><%= @post.text %></p>
+  </div>
+</div>
+<div class="post-comments">
+  <% @post.comments.each do |comment| %>
+    <%= render partial: 'shared/comment', locals: { comment: comment } %>
+  <% end %>
+</div>
