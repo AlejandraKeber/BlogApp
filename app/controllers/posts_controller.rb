@@ -10,6 +10,15 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    post = Post.new
+    respond_to do |format|
+      format.html { render :new, locals: { post: post } }
+    end
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    @post = @user.posts.create(post_params)
+    redirect_to user_posts_path(@user)
   end
 end
