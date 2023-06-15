@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .user {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .user-image {
+  border: 1px solid #ccc;
+  height: 80px;
+  width: 80px;
+ }
+
+ .user-detail {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 10px;
+ }
+
+ .post-number {
+  vertical-align: bottom;
+ }
+
+ .bio {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .counters {
+  text-align: end;
+ }
+
+ .comments {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post-detail {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+
+ .post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .post-comments {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
