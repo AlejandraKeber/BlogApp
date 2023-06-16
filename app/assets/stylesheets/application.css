@@ -181,3 +181,38 @@
   color: #434343;
   padding: 10px;
  }
+
+ .post-comment-form {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+ }
+
+ .comment-form textarea {
+  width: 80%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+  padding: 10px;
+ }
+
+ .comment-form-btn {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+ }
+
+ .comment-form-btn input {
+  background-color: #fff;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  color: #434343;
+  padding: 10px;
+ }

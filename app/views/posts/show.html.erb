@@ -10,7 +10,21 @@
   </div>
 </div>
 <div class="post-comments">
+  <h4>Comments:</h4>
   <% @post.comments.each do |comment| %>
     <%= render partial: 'shared/comment', locals: { comment: comment } %>
+  <% end %>
+</div>
+<div class="post-comment-form">
+  <h4>Add a comment:</h4>
+  <%= form_with model: @comment, url: create_comment_path, method: :post, local: true, scope: :comment do |form| %>
+    <div class="comment-form">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+    <%= form.hidden_field :post_id, value: @post.id %>
+    </div>
+    <div class="comment-form-btn">
+    <%= form.submit %>
+    </div>
   <% end %>
 </div>
