@@ -58,6 +58,26 @@
   background-color: #2d2d2d;
  }
 
+ .new-post {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  text-align: center;
+ }
+
+ .new-post button {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+ }
+
  .post-number {
   vertical-align: bottom;
  }
