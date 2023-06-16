@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def new
     @comment = Comment.new
   end
@@ -17,9 +16,9 @@ class CommentsController < ApplicationController
     end
   end
 
-  private 
+  private
+
   def comment_params
     params.require(:comment).permit(:text, :post_id)
   end
-
 end

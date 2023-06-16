@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
-
   end
 
   def new
@@ -22,12 +21,13 @@ class PostsController < ApplicationController
     if @post.save
       @post.increment_user_posts_counter
       redirect_to user_post_path(current_user, @post)
-      else
+    else
       render :new
     end
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
