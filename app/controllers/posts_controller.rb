@@ -7,29 +7,28 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
-    Comment.new
-    Like.new
+
   end
 
   def new
-    post = Post.new
-    respond_to do |format|
-      format.html { render :new, locals: { post: } }
-    end
+    @post = Post.new
   end
 
   def create
-    post_params = params.require(:post).permit(:title, :text)
-    post = Post.new(post_params)
-    post.user = current_user
-    respond_to do |format|
-      if post.save
-        format.html { redirect_to user_post_path(current_user, post) }
-        flash[:notice] = 'Post created successfully'
+    @post = Post.new(post_params)
+    @post.author_id = current_user.id
+    @post.comments_counter = 0
+    @post.likes_counter = 0
+    if @post.save
+      @post.increment_user_posts_counter
+      redirect_to user_post_path(current_user, @post)
       else
-        format.html { render :new, locals: { post: } }
-        flash[:alert] = 'Post not created'
-      end
+      render :new
     end
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
