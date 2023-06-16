@@ -5,11 +5,10 @@ class CommentsController < ApplicationController
     comment.user = current_user
     comment.post = Post.find(comment_params[:post_id])
     respond_to do |format|
+      format.html { redirect_to user_post_path(current_user, comment.post) }
       if comment.save
-        format.html { redirect_to user_post_path(current_user, comment.post) }
         flash[:notice] = 'Comment created successfully'
       else
-        format.html { redirect_to user_post_path(current_user, comment.post) }
         flash[:alert] = 'Comment not created'
       end
     end
