@@ -5,11 +5,10 @@ class LikesController < ApplicationController
     like.user = current_user
     like.post = Post.find(like_params[:post_id])
     respond_to do |format|
+      format.html { redirect_to user_post_path(current_user, like.post) }
       if like.save
-        format.html { redirect_to user_post_path(current_user, like.post) }
         flash[:notice] = 'Like created successfully'
       else
-        format.html { redirect_to user_post_path(current_user, like.post) }
         flash[:alert] = 'Like not created'
       end
     end
