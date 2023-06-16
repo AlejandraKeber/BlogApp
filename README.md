@@ -87,6 +87,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 - Ruby version 3.1.3 or later
 - Rails version 7 or later
+- Postgresql
 
 ### Setup
 
@@ -101,10 +102,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-  `bundle install`<br>
-  and<br>
-  `npm install`
-
+  `bundle install`
 
 ### Usage
 
@@ -116,7 +114,7 @@ To start the server, execute the following command:
 
 To run tests, run the following command:
 
-`rake test TEST=test/**/*.rb`
+`rspec`
 
 
 ### Deployment
@@ -138,9 +136,8 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add controllers]**
-- [ ] **[Add views]**
 - [ ] **[Connect to API]**
+- [ ] **[Better design]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
