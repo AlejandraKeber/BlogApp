@@ -6,7 +6,7 @@ class LikesController < ApplicationController
     like.post = Post.find(like_params[:post_id])
     respond_to do |format|
       if like.save
-        Like.increment_counter(:likes_counter, like.post.id)
+        like.increment_post_likes_counter
         format.html { redirect_to user_post_path(current_user, like.post) }
         flash[:notice] = 'Like created successfully'
       else

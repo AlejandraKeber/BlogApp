@@ -9,6 +9,12 @@
     <p><%= @post.text %></p>
   </div>
 </div>
+<div class="post-likes">
+<%= form_with model: @like, url: create_like_path, method: :post, local: true, scope: :like do |form| %>
+  <%= form.submit 'Like' %>
+  <%= form.hidden_field :post_id, value: @post.id %>
+<% end %>
+</div>
 <div class="post-comments">
   <h4>Comments:</h4>
   <% @post.comments.each do |comment| %>
