@@ -12,5 +12,6 @@ class CommentsController < ApplicationController
         format.html { redirect_to user_post_path(current_user, comment.post) }
         flash[:alert] = 'Comment not created'
       end
+    end
   end
 end
