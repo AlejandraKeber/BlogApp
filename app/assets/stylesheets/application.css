@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body {
+  body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #2d2d2d;
   color: #fff;
@@ -216,3 +216,21 @@
   color: #434343;
   padding: 10px;
  }
+
+.post-likes {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+ }
+
+ .post-likes input {
+  background-color: #fff;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  color: #434343;
+  padding: 10px;
+ }
+  

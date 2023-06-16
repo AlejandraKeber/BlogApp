@@ -11,7 +11,7 @@
 </div>
 <div class="post-likes">
 <%= form_with model: @like, url: create_like_path, method: :post, local: true, scope: :like do |form| %>
-  <%= form.submit 'Like' %>
+  <%= form.submit 'Like this post' %>
   <%= form.hidden_field :post_id, value: @post.id %>
 <% end %>
 </div>
