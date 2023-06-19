@@ -25,6 +25,16 @@
   text-decoration: none;
  }
 
+ .user-welcome {
+  background-color: #434343;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #5a5a5a;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+ }
+
  .user {
   background-color: #5a5a5a;
   border: 1px solid #5a5a5a;
