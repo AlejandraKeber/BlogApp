@@ -6,7 +6,8 @@ RSpec.describe 'Post index page', type: :feature do
     @user2 = User.create(name: 'Christopher', bio: 'FullStack Dev', photo: 'https://unsplash.com/photos/hodKTZow_Kk',
                          posts_counter: 2)
     @post1 = Post.create(title: 'Test', text: 'First Post', comments_counter: 0, likes_counter: 0, author_id: @user.id)
-    @post2 = Post.create(title: 'Test2', text: 'Second Post', comments_counter: 0, likes_counter: 0, author_id: @user.id)
+    @post2 = Post.create(title: 'Test2', text: 'Second Post', comments_counter: 0, likes_counter: 0,
+                         author_id: @user.id)
     @comment1 = Comment.create(text: 'First Comment', post_id: @post1.id, user_id: @user2.id)
     @comment2 = Comment.create(text: 'Second Comment', post_id: @post2.id, user_id: @user2.id)
     @like1 = Like.create(post_id: @post1.id, user_id: @user2.id)
