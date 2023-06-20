@@ -1,3 +1,4 @@
+<h1 class="user-welcome">Welcome to your blog</h1>
 <% @users.each do |user| %>
   <%= link_to user_path(user) do %>
     <%= render 'shared/user', user: user %>
