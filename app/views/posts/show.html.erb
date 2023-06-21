@@ -14,12 +14,14 @@
 <%= form_with model: @like, url: create_like_path, method: :post, local: true, scope: :like do |form| %>
   <%= form.submit 'Like this post' %>
   <%= form.hidden_field :post_id, value: @post.id %>
+  <%= button_to 'Delete Post', user_post_path(@post.author_id, @post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, class: 'btn btn-danger' %>
 <% end %>
 </div>
 <div class="post-comments">
   <h4>Comments:</h4>
   <% @post.comments.each do |comment| %>
     <%= render partial: 'shared/comment', locals: { comment: comment } %>
+    <%= button_to 'Delete Comment', user_post_comment_path(@post.author_id, @post, comment), method: :delete, data: { confirm: 'Are you sure you want to delete this comment?' }, class: 'btn btn-danger' %>
   <% end %>
 </div>
 <div class="post-comment-form">
