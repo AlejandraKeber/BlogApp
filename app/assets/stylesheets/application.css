@@ -263,4 +263,22 @@
   color: #434343;
   padding: 10px;
  }
-  
+
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 30px;
+  align-items: center;
+}
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 30px;
+  align-items: center;
+}
+.login-wrapper form .actions {
+  display: flex;
+  justify-content: center;
+}
