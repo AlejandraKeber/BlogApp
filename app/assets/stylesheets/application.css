@@ -271,6 +271,18 @@
   padding: 30px;
   align-items: center;
 }
+
+.signup-wrapper form .actions {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-wrapper form,
+.signup-wrapper input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .login-wrapper {
   display: flex;
   flex-direction: column;
@@ -278,7 +290,14 @@
   padding: 30px;
   align-items: center;
 }
+
 .login-wrapper form .actions {
   display: flex;
   justify-content: center;
+}
+
+.login-wrapper form,
+.login-wrapper input {
+  width: 100%;
+  margin-bottom: 10px;
 }
