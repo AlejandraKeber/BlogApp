@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
     if @post.save
-      @post.increment_user_posts_counter
+      @post.update_comments_counter
       redirect_to user_post_path(current_user, @post)
     else
       render :new
@@ -30,9 +30,15 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.decrement_user_posts_counter
-    @post.destroy
-    redirect_to user_posts_path(current_user), notice: 'Post deleted successfully.'
+    if can?(:destroy, @post) # Check if the current user is authorized to delete the post
+      @post.likes.destroy_all
+      @post.comments.destroy_all
+      @post.destroy
+      @user.update_posts_counter
+      redirect_to user_posts_path(user_id: @user.id), notice: 'Post was successfully deleted.'
+    else
+      redirect_to user_post_path(user_id: @user.id, id: @post.id), alert: 'You are not authorized to delete this post.'
+    end
   end
 
   private

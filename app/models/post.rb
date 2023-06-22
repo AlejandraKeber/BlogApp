@@ -9,19 +9,11 @@ class Post < ApplicationRecord
 
   after_create :increment_user_posts_counter
 
-  def increment_user_posts_counter
-    user.increment!(:posts_counter)
+  def update_posts_counter
+    update(PostCounter: posts.count)
   end
 
   def recent_comments
     comments.order(created_at: :desc).limit(5)
-  end
-
-  def decrement_user_posts_counter
-    user.decrement!(:posts_counter)
-  end
-
-  def decrement_comments_counter
-    decrement!(:comments_counter)
   end
 end
