@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, alert: exception.message
-  end
+  en
   
   def set_current_user
     @current_user = current_user
