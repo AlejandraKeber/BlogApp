@@ -9,4 +9,14 @@ Rails.application.routes.draw do
   post '/posts/new', to: 'posts#create', as: 'create_post'
   post 'comments/new', to: 'comments#create', as: 'create_comment'
   post 'likes/new', to: 'likes#create', as: 'create_like'
+
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [] do
+        resources :posts, only: [:index] do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
 end
